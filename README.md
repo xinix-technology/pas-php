@@ -1,2 +1,4 @@
-# reek-php
-Reek PHP Autoloader
+pas-php
+=======
+
+pas-php is php plugin for pas

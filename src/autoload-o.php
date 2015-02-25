@@ -10,10 +10,4 @@ spl_autoload_register(function ($class) {
             }
         }
     }
-    // var_dump($class);
-    // $file = preg_replace('#\\\|_(?!.+\\\)#', '/', $class) . '.php';
-    // var_dump($file);
-    // if (stream_resolve_include_path($file)) {
-    //     require $file;
-    // }
 });
