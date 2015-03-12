@@ -4,7 +4,7 @@ $autoload = json_decode(file_get_contents('../autoload.json'), 1);
 
 spl_autoload_register(function ($class) use ($autoload) {
     foreach ($autoload as $ns => $loader) {
-        if (strpos($class, $ns.'\\') === 0) {
+        if ($class === $ns || strpos($class, $ns.'\\') === 0) {
             $file = '..'
                 . DIRECTORY_SEPARATOR
                 . $loader
