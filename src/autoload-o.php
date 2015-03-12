@@ -3,7 +3,7 @@
 $autoload = include('../autoload.php');
 
 foreach($autoload['files'] as $al) {
-    require $al;
+    require "../$al";
 }
 
 spl_autoload_register(function ($class) use ($autoload) {
