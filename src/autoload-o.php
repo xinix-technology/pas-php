@@ -1,7 +1,12 @@
 <?php
 
+$autoload = include('../autoload.php');
+
+foreach($autoload['files'] as $al) {
+    require $al;
+}
+
 spl_autoload_register(function ($class) use ($autoload) {
-    $autoload = include('../autoload.php');
 
     foreach ($autoload as $ns => $loader) {
         if ($class === $ns || strpos($class, $ns.'\\') === 0) {
