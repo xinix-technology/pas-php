@@ -1,0 +1,29 @@
+{
+  "name": "pas-php",
+  "version": "0.1.4",
+  "main": "lib/index.js",
+  "dependencies": {
+    "request": "^2.53.0",
+    "semver": "^4.3.1"
+  },
+  "description": "pas-php =======",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reekoheek/pas-php.git"
+  },
+  "keywords": [
+    "pas",
+    "php",
+    "plugin"
+  ],
+  "author": "Ganesha <reekoheek@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reekoheek/pas-php/issues"
+  },
+  "homepage": "https://github.com/reekoheek/pas-php"
+}
