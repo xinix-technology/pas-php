@@ -6,7 +6,9 @@ foreach($autoload['files'] as $al) {
     require "../$al";
 }
 
-spl_autoload_register(function ($class) use ($autoload) {
+$cwd = getcwd();
+
+spl_autoload_register(function ($class) use ($autoload, $cwd) {
     foreach ($autoload as $ns => $loader) {
         if ($class === $ns || strpos($class, $ns.'\\') === 0) {
 
@@ -15,7 +17,10 @@ spl_autoload_register(function ($class) use ($autoload) {
                 $fileSuffix = DIRECTORY_SEPARATOR . preg_replace('/\\\/', '/', substr($class, strlen($ns) + 1));
             }
 
-            $file = '..'
+
+            $file = $cwd
+                . DIRECTORY_SEPARATOR
+                . '..'
                 . DIRECTORY_SEPARATOR
                 . $loader
                 . $fileSuffix
