@@ -1,6 +1,6 @@
 {
   "name": "pas-php",
-  "version": "3.0.1",
+  "version": "3.0.3",
   "main": "lib/index.js",
   "dependencies": {
     "request": "^2.53.0",
